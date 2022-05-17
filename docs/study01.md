@@ -101,3 +101,42 @@ npm i - D @tensorflow/tfjs
 #### 安装纯 javascript 版本，这是性能方面最慢的选项（浏览器安装相似）
 
 ## 什么是 Tensor
+
+-   中文名叫张量
+-   张量是向量和矩阵更高维度的推广
+-   相当于多维数组（类似嵌套数组）
+
+## Tensor 和 机器学习的关系？
+
+-   神经网络是什么样子？
+-   如果让你设计神经网络的数据结构，你会怎么样设计？
+
+## 神经网络数据结构设计
+
+-   每个神经元是一个数组
+-   以层为单位
+-   神经网络的每一层要存储 N 维数据
+-   N 层的 For 循环运算
+-   Tensor 作为高维数据结构完美解决以上问题
+
+```javascript
+// 传统 for 循环
+const input = [1, 2, 3, 4];
+const w = [
+	[1, 2, 3, 4],
+	[2, 3, 4, 5],
+	[3, 4, 5, 6],
+	[4, 5, 6, 7],
+];
+const output = [0, 0, 0, 0];
+for (let i = 0; i < w.length; i++) {
+	for (let j = 0; j < input.length; j++) {
+		output[i] += input[j] * w[i][j];
+	}
+}
+
+console.log(output);
+
+// 使用 tensor
+tf.tensor(w).dot(tf.tensor(input)).print();
+```
