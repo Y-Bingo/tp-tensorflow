@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>iris</title>
+	</head>
+	<body>
+		<form action="" onsubmit="predict(this); return false;">
+			花萼长度：
+			<input type="text" name="a" />
+			<br />
+			花萼宽度：
+			<input type="text" name="b" />
+			<br />
+			花瓣长度：
+			<input type="text" name="c" />
+			<br />
+			花瓣宽度：
+			<input type="text" name="d" />
+			<br />
+			<button type="submit">预测</button>
+		</form>
+		<div id="result"><p></p></div>
+	</body>
+	<script src="script.js"></script>
+</html>
