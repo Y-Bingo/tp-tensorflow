@@ -9,7 +9,9 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"@tensorflow-models/speech-commands": "^0.4.0",
 		"@tensorflow/tfjs": "^3.16.0",
+		"@tensorflow/tfjs-node": "^1.2.9",
 		"@tensorflow/tfjs-vis": "^1.5.1",
 		"seedrandom": "^3.0.5"
 	},
